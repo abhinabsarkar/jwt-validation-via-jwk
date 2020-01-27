@@ -186,10 +186,7 @@ public class JWTValidation {
 
         try {
             URL url = new URL(jwkUrl);
-            connection = (HttpURLConnection) url.openConnection();
-			// Header should be externalized as it will be different for each environment 
-			connection.setRequestProperty ("x-ibm-client-secret", "");
-			connection.setRequestProperty ("x-ibm-client-id", "");			
+            connection = (HttpURLConnection) url.openConnection();	
 
             connection.setRequestMethod("GET");
 
